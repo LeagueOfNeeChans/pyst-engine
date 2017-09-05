@@ -8,6 +8,7 @@ package com.trinary.vnjy.se;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 /**
@@ -48,9 +49,9 @@ public class ComplexCommand extends Command {
 	}
 
 	@Override
-	public ArrayList<String> getArgs() {
+	public List<String> getArgs() {
 		Command command = commands.peek();
-		ArrayList<String> args;
+		List<String> args;
 		if (command == null) {
 			args = new ArrayList<>();
 		} else {
@@ -62,7 +63,7 @@ public class ComplexCommand extends Command {
 
 	@Override
 	public String getArg(Integer index) {
-		ArrayList<String> args = getArgs();
+		List<String> args = getArgs();
 
 		if (index >= args.size()) {
 			return "";

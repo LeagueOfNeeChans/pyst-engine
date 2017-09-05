@@ -7,6 +7,7 @@
 package com.trinary.vnjy.pystengine;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import com.trinary.vnjy.se.ScriptEngine;
 import com.trinary.vnjy.se.StringFormatter;
@@ -67,12 +68,32 @@ public class Actor {
 	public boolean has(String item) {
 		return (this.inventory.contains(item));
 	}
+	
+	public void enterScene(String mood, String actorPosition) {
+		se.addCommand("ui.actor.enter", Arrays.asList(name, mood, actorPosition, "", ""));
+	}
+	
+	public void exitScene() {
+		se.addCommand("ui.actor.exit", Arrays.asList(name, "", ""));
+	}
+	
+	public void enterScene(String mood, String actorPosition, String transition, Integer speed) {
+		se.addCommand("ui.actor.enter", Arrays.asList(name, mood, actorPosition, transition, speed.toString()));
+	}
+	
+	public void exitScene(String transition, Integer speed) {
+		se.addCommand("ui.actor.exit", Arrays.asList(name, transition, speed.toString()));
+	}
 
 	public void say(String dialogue) {
 		se.addCommand("ui.actor.say", name, sf.format(dialogue));
 	}
 
 	public void change(String mood) {
-		se.addCommand("ui.actor.change", name, mood);
+		se.addCommand("ui.actor.change", Arrays.asList(name, mood, "", ""));
+	}
+	
+	public void change(String mood, String transition1, String transition2, Integer speed) {
+		se.addCommand("ui.actor.change", Arrays.asList(name, mood, transition1, transition2, speed.toString()));
 	}
 }

@@ -7,6 +7,8 @@
 package com.trinary.vnjy.se;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import org.python.core.PyObject;
 import org.python.core.PyString;
 import org.python.core.PyTuple;
@@ -19,7 +21,7 @@ public class Command implements Tagged {
 	protected String from = "";
 	protected Boolean blocking = true;
 	private String command = "";
-	private ArrayList<String> args = new ArrayList<>();
+	private List<String> args = new ArrayList<>();
 	private Boolean removed = false;
 
 	public String getFrom() {
@@ -46,7 +48,7 @@ public class Command implements Tagged {
 		this.command = command;
 	}
 
-	public ArrayList<String> getArgs() {
+	public List<String> getArgs() {
 		return args;
 	}
 
@@ -104,7 +106,7 @@ public class Command implements Tagged {
 		}
 	}
 
-	public Command(String command, ArrayList<String> args) {
+	public Command(String command, List<String> args) {
 		this.command = command;
 		this.args = args;
 	}

@@ -137,7 +137,7 @@ public class ScriptEngine {
 		addCommand(new Command(command, args));
 	}
 
-	public void addCommand(String command, ArrayList<String> args) {
+	public void addCommand(String command, List<String> args) {
 		addCommand(new Command(command, args));
 	}
 

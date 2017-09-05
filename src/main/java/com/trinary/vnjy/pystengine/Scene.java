@@ -6,6 +6,8 @@
 
 package com.trinary.vnjy.pystengine;
 
+import java.util.Arrays;
+
 import com.trinary.vnjy.se.ScriptEngine;
 
 /**
@@ -21,6 +23,22 @@ public class Scene {
 
 	public void move(String location) {
 		se.addCommand("ui.scene.move", location, "");
+	}
+	
+	public void enter(String location) {
+		se.addCommand("ui.scene.enter", Arrays.asList(location, "", ""));
+	}
+	
+	public void enter(String location, String transition, Integer speed) {
+		se.addCommand("ui.scene.enter", Arrays.asList(location, transition, speed.toString()));
+	}
+	
+	public void exit() {
+		se.addCommand("ui.scene.exit", Arrays.asList("", ""));
+	}
+	
+	public void exit(String transition, Integer speed) {
+		se.addCommand("ui.scene.exit", Arrays.asList(transition, speed.toString()));
 	}
 
 	public void add_actor(Actor actor, String side) {
