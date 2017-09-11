@@ -6,16 +6,16 @@
 
 package com.trinary.vnjy.pystengine;
 
-import com.trinary.vnjy.se.ScriptEngine;
+import com.trinary.vnjy.se.GenericScriptEngine;
 
 /**
  *
  * @author dstillz
  */
 public class PystEngine {
-	protected ScriptEngine se;
+	protected GenericScriptEngine se;
 
-	public PystEngine(ScriptEngine se) {
+	public PystEngine(GenericScriptEngine se) {
 		this.se = se;
 	}
 

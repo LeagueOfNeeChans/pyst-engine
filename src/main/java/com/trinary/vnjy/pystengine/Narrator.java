@@ -6,14 +6,14 @@
 
 package com.trinary.vnjy.pystengine;
 
-import com.trinary.vnjy.se.ScriptEngine;
+import com.trinary.vnjy.se.GenericScriptEngine;
 
 /**
  *
  * @author dstillz
  */
 public class Narrator extends Actor {
-	public Narrator(ScriptEngine se) {
+	public Narrator(GenericScriptEngine se) {
 		super("narrator", se);
 	}
 

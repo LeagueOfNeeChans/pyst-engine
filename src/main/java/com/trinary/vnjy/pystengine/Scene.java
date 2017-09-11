@@ -8,16 +8,16 @@ package com.trinary.vnjy.pystengine;
 
 import java.util.Arrays;
 
-import com.trinary.vnjy.se.ScriptEngine;
+import com.trinary.vnjy.se.GenericScriptEngine;
 
 /**
  *
  * @author dstillz
  */
 public class Scene {
-	protected ScriptEngine se;
+	protected GenericScriptEngine se;
 
-	public Scene(ScriptEngine se) {
+	public Scene(GenericScriptEngine se) {
 		this.se = se;
 	}
 

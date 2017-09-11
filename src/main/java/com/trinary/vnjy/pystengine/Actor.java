@@ -9,31 +9,28 @@ package com.trinary.vnjy.pystengine;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.trinary.vnjy.se.ScriptEngine;
-import com.trinary.vnjy.se.StringFormatter;
+import com.trinary.vnjy.se.GenericScriptEngine;
 
 /**
  *
  * @author dstillz
  */
 public class Actor {
-	protected ScriptEngine se;
-	protected StringFormatter sf;
+	protected GenericScriptEngine se;
 	protected String name = "";
 	protected ArrayList<String> switches = new ArrayList<>();
 	protected ArrayList<String> inventory = new ArrayList<>();
 
-	public Actor(String name, ScriptEngine se) {
+	public Actor(String name, GenericScriptEngine se) {
 		this.name = name;
 		this.se = se;
-		this.sf = new StringFormatter(se);
 	}
 
-	public ScriptEngine getSe() {
+	public GenericScriptEngine getSe() {
 		return se;
 	}
 
-	public void setSe(ScriptEngine se) {
+	public void setSe(GenericScriptEngine se) {
 		this.se = se;
 	}
 
@@ -86,7 +83,7 @@ public class Actor {
 	}
 
 	public void say(String dialogue) {
-		se.addCommand("ui.actor.say", name, sf.format(dialogue));
+		se.addCommand("ui.actor.say", name, dialogue);
 	}
 
 	public void change(String mood) {

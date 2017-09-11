@@ -8,7 +8,8 @@ package com.trinary.vnjy;
 
 import com.trinary.vnjy.se.Command;
 import com.trinary.vnjy.se.GameState;
-import com.trinary.vnjy.se.ScriptEngine;
+import com.trinary.vnjy.se.GenericScriptEngine;
+import com.trinary.vnjy.se.JythonEngine;
 
 /**
  *
@@ -20,7 +21,7 @@ public class Application {
 		GameState state = GameState.create("lon");
 
 		// Initialize script engine.
-		ScriptEngine se = ScriptEngine.create(state);
+		GenericScriptEngine se = JythonEngine.create(state);
 
 		se.nextScene();
 		se.nextScene();
