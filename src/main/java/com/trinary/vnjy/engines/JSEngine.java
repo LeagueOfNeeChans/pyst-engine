@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.trinary.vnjy.se;
+package com.trinary.vnjy.engines;
 
 import java.util.Map;
 
@@ -14,6 +14,8 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 import org.apache.commons.codec.binary.Base64;
+
+import com.trinary.vnjy.objects.GameState;
 
 /**
  *

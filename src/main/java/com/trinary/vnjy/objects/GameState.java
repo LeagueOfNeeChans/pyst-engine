@@ -1,10 +1,10 @@
-package com.trinary.vnjy.se;
+package com.trinary.vnjy.objects;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import com.trinary.vnjy.pystengine.Actor;
-import com.trinary.vnjy.pystengine.Player;
+import com.trinary.vnjy.injects.Actor;
+import com.trinary.vnjy.injects.Player;
 
 public class GameState {
 	private String currentScene;

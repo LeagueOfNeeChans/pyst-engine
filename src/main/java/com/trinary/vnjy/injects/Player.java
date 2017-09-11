@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package com.trinary.vnjy.pystengine;
+package com.trinary.vnjy.injects;
 
-import com.trinary.vnjy.se.GenericScriptEngine;
+import com.trinary.vnjy.engines.GenericScriptEngine;
 
 /**
  *

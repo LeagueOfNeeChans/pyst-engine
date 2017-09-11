@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.trinary.vnjy.se;
+package com.trinary.vnjy.objects;
 
 /**
  *

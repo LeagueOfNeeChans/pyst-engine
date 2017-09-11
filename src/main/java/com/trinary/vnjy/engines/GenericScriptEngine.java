@@ -1,4 +1,4 @@
-package com.trinary.vnjy.se;
+package com.trinary.vnjy.engines;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -9,11 +9,13 @@ import java.util.Map;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.trinary.vnjy.pystengine.Actor;
-import com.trinary.vnjy.pystengine.Narrator;
-import com.trinary.vnjy.pystengine.Player;
-import com.trinary.vnjy.pystengine.PystEngine;
-import com.trinary.vnjy.pystengine.Scene;
+import com.trinary.vnjy.injects.Actor;
+import com.trinary.vnjy.injects.Narrator;
+import com.trinary.vnjy.injects.Player;
+import com.trinary.vnjy.injects.PystEngine;
+import com.trinary.vnjy.injects.Scene;
+import com.trinary.vnjy.objects.Command;
+import com.trinary.vnjy.objects.GameState;
 
 public abstract class GenericScriptEngine {
 	private final List<Command> commands;

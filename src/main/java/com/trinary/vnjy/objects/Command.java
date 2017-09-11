@@ -4,41 +4,18 @@
  * and open the template in the editor.
  */
 
-package com.trinary.vnjy.se;
+package com.trinary.vnjy.objects;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.python.core.PyObject;
-import org.python.core.PyString;
-import org.python.core.PyTuple;
 
 /**
  *
  * @author mmain
  */
-public class Command implements Tagged {
-	protected String from = "";
-	protected Boolean blocking = true;
+public class Command {
 	private String command = "";
 	private List<String> args = new ArrayList<>();
-	private Boolean removed = false;
-
-	public String getFrom() {
-		return from;
-	}
-
-	public void setFrom(String from) {
-		this.from = from;
-	}
-
-	public Boolean isBlocking() {
-		return blocking;
-	}
-
-	public void setBlocking(Boolean blocking) {
-		this.blocking = blocking;
-	}
 
 	public String getCommand() {
 		return command;
@@ -64,47 +41,15 @@ public class Command implements Tagged {
 		return args.get(index);
 	}
 
-	@Override
-	public String getTag() {
-		if (removed) {
-			return "none";
-		}
-
-		return command.split("\\.")[0];
-	}
-
 	public String getNamespace() {
-		if (removed) {
-			return "none";
-		}
-
 		return command.split("\\.")[1];
 	}
 
 	public String getFunction() {
-		if (removed) {
-			return "nop";
-		}
-
 		return command.split("\\.")[2];
 	}
 
-	public Command remove() {
-		System.out.println("MARKING COMMAND " + this + " COMPLETED.");
-
-		removed = true;
-		return this;
-	}
-
-	public Command() {
-	}
-
-	public Command(String command, PyTuple args) {
-		this.command = command;
-		for (PyObject object : args.list) {
-			this.args.add(((PyString) object).toString());
-		}
-	}
+	public Command() {}
 
 	public Command(String command, List<String> args) {
 		this.command = command;

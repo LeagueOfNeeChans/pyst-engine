@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.trinary.vnjy.se;
+package com.trinary.vnjy.engines;
 
 import java.util.Map;
 
@@ -13,6 +13,8 @@ import org.python.core.PyFunction;
 import org.python.core.PyString;
 import org.python.core.PyStringMap;
 import org.python.util.PythonInterpreter;
+
+import com.trinary.vnjy.objects.GameState;
 
 /**
  *
